@@ -1,0 +1,20 @@
+#output {
+  font-family: monospace;
+  font-weight: bold;
+  color: rgb(196, 204, 204);
+  background-color: #0D1323;
+  font-size: large;
+  text-align: left;
+  padding: 5px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0 5px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}

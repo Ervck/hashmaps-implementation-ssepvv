@@ -1,0 +1,22 @@
+{
+  "name": "react-ts",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^16.8.4",
+    "@types/react-dom": "^16.8.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start & npm run doc",
+    "build": "react-scripts-ts build",
+    "doc": "typedoc ./LinkedList.ts ./iqueue.ts ./Queue.ts --out doc --excludeExternals",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "react-scripts-ts": "latest",
+    "typedoc": "^0.13.0"
+  }
+}
