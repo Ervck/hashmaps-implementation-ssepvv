@@ -62,7 +62,15 @@ class LinkedList<T> {
    * @returns item removed (if it was present) or undefined otherwise
    */
   public removeFirst(callback: (item:T) => boolean):T|void {
-    // implement this
+
+  if (this.length !== 0 && callback(this.head.value)) {
+
+    let value = this.head.value;
+    this.head = this.head.next;
+    
+    return value;
+
+    }
   }
 
   /**

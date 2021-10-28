@@ -32,7 +32,18 @@ class HashMap<T> implements IMap<T> {
    * Removes all key/value pairs from Map
    */
   public clear():void {
-    // implement this
+
+  
+  this.buckets = this.buckets.fill(undefined)
+
+  /* 
+   while (this.buckets.length) {
+
+     this.buckets.pop();
+
+   }
+  */
+
   }
 
   /**
