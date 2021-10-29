@@ -63,14 +63,25 @@ class LinkedList<T> {
    */
   public removeFirst(callback: (item:T) => boolean):T|void {
 
-  if (this.length !== 0 && callback(this.head.value)) {
+  let value = this.head.value;
 
-    let value = this.head.value;
+   if (this.length !== 0 && callback(value)) {
+
     this.head = this.head.next;
     
     return value;
 
-    }
+   }
+
+   let prevNode = this.head;
+
+   while(prevNode.next !== null && !callback(prevNode.next.value)) {
+
+    prevNode = prevNode.next;
+
+   }
+
+
   }
 
   /**
