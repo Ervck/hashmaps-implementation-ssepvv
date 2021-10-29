@@ -96,8 +96,18 @@ class HashMap<T> implements IMap<T> {
    * @param value - value associated to key
    * @returns this (the Map for which the key was added)
    */
-  public set(key: string, value: T):HashMap<T> {
+  public set(theKey: string, keysValue: T):HashMap<T> {
     // implement this, keep return statement
+
+    const index = this.hash(theKey) % this.buckets.length;
+    if(typeof this.buckets[index] === 'undefined') {
+
+      this.buckets[index] = new LinkedList <{key: string; value: T; }>()
+
+      this.buckets[index].insertAtFront({key: theKey, value: keysValue});
+
+    }
+
     return this;
   }
 
