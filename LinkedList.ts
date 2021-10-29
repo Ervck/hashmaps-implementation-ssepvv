@@ -81,6 +81,13 @@ class LinkedList<T> {
 
    }
 
+   if (prevNode.next !== null) {
+
+    const nodeValue = prevNode.next.value;
+    prevNode.next = prevNode.next.next;
+    return nodeValue;
+
+   }
 
   }
 
