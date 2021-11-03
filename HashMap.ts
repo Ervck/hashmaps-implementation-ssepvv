@@ -75,7 +75,16 @@ class HashMap<T> implements IMap<T> {
    */
   public has(key:string):boolean {
     // implement this, remove return statement
-    return true;
+
+    const index = this.hash(key) % this.buckets.length;
+
+    if (typeof this.buckets[index] === 'undefined') {
+
+      return false;
+    }
+    
+    return Boolean(this.buckets[index].find(item => item.key === key));
+    
   }
 
   /**
